@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>digivantagesolutions</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body onload="createCaptcha()">
+    <div class="container-fluid mt-0">
+      <!-- Sidebar -->
+      <div
+        class="w3-sidebar w3-bar-block"
+        style="
+          display: none;
+          z-index: 5;
+          width: fit-content;
+          height: max-content;
+        "
+        id="mySidebar"
+      >
+        <button
+          class="btn btn-md colorThemeGrayDark"
+          style="float: right"
+          onclick="w3_close()"
+        >
+          &times;
+        </button>
+        <div class="btn-group-vertical" style="width: 100%">
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              NEW CUSTOMER
+            </button>
+            <ul class="dropdown-menu colorThemeWhite" style="width: 100%">
+              <li><a class="dropdown-item" href="#">BUY ONLINE</a></li>
+              <li><a class="dropdown-item" href="#">ALL PLANS</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              EXISTING CUSTOMER
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">FUNDS AND NAV</a></li>
+              <li><a class="dropdown-item" href="#">MANAGE POLICY</a></li>
+              <li><a class="dropdown-item" href="#">CLAMS</a></li>
+            </ul>
+          </div>
+          <div class="btn-group colorThemeGrayDark">
+            <button
+              type="button"
+              class="btn dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              TOOLS AND CALCULATOR
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">Test1</a></li>
+              <li><a class="dropdown-item" href="#">test2</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              ABOUT US
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">Test1</a></li>
+              <li><a class="dropdown-item" href="#">Test2</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              MEDIA CENTER
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">Test1</a></li>
+              <li><a class="dropdown-item" href="#">Test2</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              KNOWLDGE CENTE
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">Test1</a></li>
+              <li><a class="dropdown-item" href="#">Test2</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              NRI CENTER
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">Test1</a></li>
+              <li><a class="dropdown-item" href="#">Test2</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn colorThemeDark dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              CAREERS
+            </button>
+            <ul class="dropdown-menu colorThemeYellow" style="width: 100%">
+              <li><a class="dropdown-item" href="#">Test1</a></li>
+              <li><a class="dropdown-item" href="#">Test2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div
+        class="w3-overlay"
+        onclick="w3_close()"
+        style="cursor: pointer"
+        id="myOverlay"
+      ></div>
+
+      <div class="logo">
+        <img
+          src="./assets/icons/logo.png"
+          alt="Insurance Logo"
+          width="100%"
+          height="auto"
+        />
+      </div>
+      <div class="row">
+        <div class="col-sm-12 colorThemeGrayDark headerText">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 centerFlex">
+                <p class="h6 p-2">
+                  Toll Free: <a href="tel:18001030003">1800-103-0003</a> | Sms:
+                  <a href="tel:9779030003">9779030003</a>
+                </p>
+              </div>
+              <div class="col-md-6 centerFlex">
+                <div class="btn-group inline p-2">
+                  <button
+                    style="
+                      border-radius: 15px;
+                      width: fit-content;
+                      padding-left: 10px;
+                      height: 30px;
+                    "
+                    class="btn round btn-sm colorThemeDark hiderLg"
+                    onclick="w3_open()"
+                  >
+                    &#9776;
+                  </button>
+                  <button
+                    type="button"
+                    class="btn colorThemeDark round btn-sm"
+                    style="
+                      border-radius: 15px;
+                      width: fit-content;
+                      padding-left: 10px;
+                      height: 30px;
+                    "
+                  >
+                    LOGIN
+                  </button>
+                  <button
+                    type="button"
+                    class="btn colorThemeYellow round btn-sm"
+                    style="
+                      border-radius: 15px;
+                      width: fit-content;
+                      padding-left: 10px;
+                      height: 30px;
+                    "
+                  >
+                    REGISTER
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary round btn-sm"
+                    style="
+                      border-radius: 15px;
+                      width: 50px;
+                      padding-left: 10px;
+                      height: 30px;
+                    "
+                  >
+                    <i class="material-icons">search</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 hidersm">
+          <ul class="nav justify-content-center p-3">
+            <li class="nav-item">
+              <a class="nav-link custom-border" href="#">ABOUT US </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-border" href="#">MEDIA CENTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-border" href="#">KNOWLDGE CENTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-border" href="#">NRI CENTER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-border" href="#">CAREERS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 hidersm">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 centerFlex">
+                <button class="btn headerBoxBtn btn-md">NEW CUSTOMER</button>
+              </div>
+
+              <div class="col-md-6 centerFlex">
+                <button class="btn headerBoxBtn btn-md">
+                  EXISTING CUSTOMER
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 colorThemeDark p-2 container hidersm">
+          <div class="container">
+            <div class="row m-1">
+              <div class="col-md-6">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <button class="nav-link listBtn btn btn-sm" href="#">
+                      BUY ONLINE
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link listBtn btn btn-sm" href="#">
+                      ALL PLANS
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link listBtn btn btn-sm" href="#">
+                      TOOLS AND CALCULATOR
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                    <button class="nav-link listBtn btn btn-sm" href="#">
+                      FUNDS AND NAV
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link listBtn btn btn-sm" href="#">
+                      MANAGE POLICY
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link listBtn btn btn-sm" href="#">
+                      CLAMS
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 colorThemeGrayDark">
+          <p class="topSmallText">
+            The Goods & Service tax (GST) is applicable with effect from 1st
+            July 2017. The effective rates of GST on life insurance will be 18%
+            for term products and ULIP charges, 4.5% (first year) and
+            2.25%(subsequent year) for endowment products and 1.8% for single
+            annuity products.
+          </p>
+        </div>
+        <div class="col-sm-12">
+          <div class="container p-2 grad1">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="mt-4 p-3 colorThemeDark rounded">
+                  <h3>GET A CALL BACK</h3>
+                  <form action="#" onsubmit="validateCaptcha()">
+                    <div class="mb-3 mt-3">
+                      <input
+                        type="name"
+                        class="form-control"
+                        id="name"
+                        placeholder="Name"
+                        name="name"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="E-mail Address"
+                        name="email"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="mobile"
+                        placeholder="Mobile No."
+                        name="
+                    mobile"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <select
+                        class="form-select"
+                        aria-placeholder="Looking For"
+                      >
+                        <option>Looking For</option>
+                        <option>policy 1</option>
+                        <option>policy 2</option>
+                        <option>policy 3</option>
+                        <option>policy 4</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <textarea
+                        class="form-control"
+                        rows="3"
+                        id="comment"
+                        name="comment"
+                        placeholder="comment"
+                      ></textarea>
+                    </div>
+                    <div class="mb-3 container">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div id="captcha" class="inline"></div>
+                          <i
+                            class="material-icons"
+                            style="font-size: 36px; cursor: pointer"
+                            onclick="createCaptcha()"
+                            >sync</i
+                          >
+                        </div>
+                        <div class="col-sm-6">
+                          <input
+                            style="width: 100%"
+                            type="text"
+                            class="form-control"
+                            name="cpatchaTextBox"
+                            placeholder="Captcha"
+                            id="cpatchaTextBox"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-check mb-3">
+                      <label class="form-check-label topSmallText">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="remember"
+                        />
+                        agree that even if my contact number is registered with
+                        NDNC/NCPR, I would still want the Company to contact me
+                        on the given number for the clarifications/ product
+                        information sought by me.
+                      </label>
+                    </div>
+                    <div class="mb-3 centerFlex">
+                      <button
+                        type="submit"
+                        class="btn colorThemeWhite btn-md rounded-pill"
+                        style="padding: 5px 50px"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img
+                  src="./assets/images/action.png"
+                  alt="Action"
+                  height="auto"
+                  width="100%"
+                />
+              </div>
+              <div class="col-md-4">
+                <div
+                  style="
+                    background-color: transparent;
+                    margin-top: 30%;
+                    margin-bottom: 30%;
+                    padding: 10%;
+                    font-size: large;
+                  "
+                >
+                  <p>Secure your family's future.<br />In just a few Clicks</p>
+                  <div>
+                    <button class="btn colorThemeYellow round">
+                      BUY ONLINE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 colorThemeDark textSrtip">
+                <p>Find out how much life insurance you need</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="container colorThemeYellow">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="container-fluid p-4">
+                  <div class="row">
+                    <div class="col-md-3">Age</div>
+                    <div class="col-md-6">
+                      <input
+                        onchange="updateAgeRange(this.value);"
+                        type="range"
+                        value="30"
+                        class="form-range"
+                        id="ageRange"
+                        name="ageRange"
+                        min="18"
+                        max="60"
+                      />
+                      <p>
+                        <span>18yrs</span> to
+                        <span>60yrs</span>
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <input
+                        value="30"
+                        onchange="updateAgeInput(this.value);"
+                        type="text"
+                        class="form-control"
+                        id="age"
+                        placeholder=""
+                        name="age"
+                      />
+                    </div>
+                    <div class="col-md-3">Already insured for</div>
+                    <div class="col-md-6">
+                      <input
+                        onchange="updateInsuredRange(this.value);"
+                        type="range"
+                        class="form-range"
+                        value="3600000"
+                        id="insuredRange"
+                        name="insuredRange"
+                        min="1000000"
+                        max="10000000"
+                      />
+                      <form>
+                        <input
+                          type="radio"
+                          id="lakhs"
+                          name="insured"
+                          value="lakhs"
+                          checked
+                        />
+                        <label for="lakhs">Lakhs</label><br />
+                        <input
+                          type="radio"
+                          id="crores"
+                          name="insured"
+                          value="crores"
+                        />
+                        <label for="crores">Crores</label><br />
+                      </form>
+                    </div>
+                    <div class="col-md-3">
+                      <input
+                        value="3600000"
+                        type="text"
+                        class="form-control"
+                        id="insured"
+                        placeholder=""
+                        name="insured"
+                        onchange="updateInsuredInput(this.value);"
+                      />
+                    </div>
+                    <div class="col-md-3">Annual income</div>
+                    <div class="col-md-6">
+                      <input
+                        onchange="updateIncomeRange(this.value);"
+                        type="range"
+                        class="form-range"
+                        id="incomeRange"
+                        name="incomeRange"
+                        value="2000000"
+                        min="1000000"
+                        max="10000000"
+                      />
+                      <form>
+                        <input
+                          type="radio"
+                          id="lakhs"
+                          name="income"
+                          value="lakhs"
+                          checked
+                        />
+                        <label for="lakhs">Lakhs</label><br />
+                        <input
+                          type="radio"
+                          id="crores"
+                          name="income"
+                          value="crores"
+                        />
+                        <label for="crores">Crores</label><br />
+                      </form>
+                    </div>
+                    <div class="col-md-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="incomeInput"
+                        placeholder=""
+                        name="incomeInput"
+                        value="2000000"
+                        onchange="updateIncomeInput(this.value);"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="calBox">
+                  <p class="centerFlex">
+                    Your ideal life insurance cover should be
+                  </p>
+                  <p
+                    class="centerFlex"
+                    style="font-size: large; font-weight: 500"
+                  >
+                    <strong>&#8377; 4,64,00,000</strong>
+                  </p>
+                  <p class="centerFlex">
+                    <button type="button" class="btn colorThemeYellow">
+                      GET INSURED NOW
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="container colorThemeWhite">
+            <form class="row">
+              <div class="col-md-12 colorThemeDark textSrtip mb-3">
+                <p>Plans For all life stages</p>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="./assets/images/freedomYouth.png"
+                      alt="Freedom & Youth"
+                      style="height: auto; width: 90%"
+                    />
+                    <div>
+                      <input
+                        type="radio"
+                        id="freedomYouth"
+                        name="lifePlans"
+                        value="freedomYouth"
+                      />
+                      <label for="freedomYouth">Freedom & Youth</label><br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="./assets/images/newlyMarried.png"
+                      alt="Newly Married"
+                      style="height: auto; width: 90%"
+                    />
+                    <div>
+                      <input
+                        type="radio"
+                        id="newlyMarried"
+                        name="lifePlans"
+                        value="newlyMarried"
+                      />
+                      <label for="newlyMarried">Newly Married</label><br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="./assets/images/familyBond.png"
+                      alt="Family Bond"
+                      style="height: auto; width: 90%"
+                    />
+                    <div>
+                      <input
+                        type="radio"
+                        id="familyBond"
+                        name="lifePlans"
+                        value="familyBond"
+                      />
+                      <label for="familyBond">Family Bond</label><br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <img
+                      src="./assets/images/gracefulAgeing.png"
+                      alt="Graceful Ageing"
+                      style="height: auto; width: 90%"
+                    />
+                    <div>
+                      <input
+                        type="radio"
+                        id="gracefulAgeing"
+                        name="lifePlans"
+                        value="gracefulAgeing"
+                      />
+                      <label for="gracefulAgeing">Graceful Ageing</label><br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="container colorThemeGrayDark">
+            <form class="row">
+              <div class="col-md-2">
+                <p>Choose Objective</p>
+              </div>
+              <div class="col-md-10">
+                <input
+                  type="radio"
+                  id="managingGrowing"
+                  name="chooseObjective"
+                  value="managingGrowing"
+                />
+                <label for="managingGrowing">Managing & Growing Wealth</label>
+                <input
+                  type="radio"
+                  id="pureProtection"
+                  name="chooseObjective"
+                  value="pureProtection"
+                />
+                <label for="pureProtection">Pure Protection</label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="container colorThemeWhite">
+            <div class="row">
+              <div class="col-sm-6 col-md-3 col-lg-2 mb-3 mt-3">
+                <div class="p-2 sliderBoxes">
+                  <p class="h4">Jeevan Nivesh Plan</p>
+                  <hr style="width: 70%; margin-left: 20%; margin-right: 20%" />
+                  <p class="h6">
+                    Plan for the wishes that come after all plans.
+                  </p>
+                  <div>
+                    <button class="btn btn-sm listBtn">KNOW MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-2 mb-3 mt-3">
+                <div class="p-2 sliderBoxes">
+                  <p class="h4">iSelect Term Plan</p>
+                  <hr style="width: 70%; margin-left: 20%; margin-right: 20%" />
+                  <p class="h6">I select the terms of my life.</p>
+                  <div>
+                    <button class="btn btn-sm listBtn">KNOW MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-2 mb-3 mt-3">
+                <div class="p-2 sliderBoxes">
+                  <p class="h4">Smart Suraksha Plan</p>
+                  <hr style="width: 70%; margin-left: 20%; margin-right: 20%" />
+                  <p class="h6">
+                    Make the smart choice to secure your family's happiness.
+                  </p>
+                  <div>
+                    <button class="btn btn-sm listBtn">KNOW MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-2 mb-3 mt-3">
+                <div class="p-2 sliderBoxes">
+                  <p class="h4">iNvestshield Plan</p>
+                  <hr style="width: 70%; margin-left: 20%; margin-right: 20%" />
+                  <p class="h6">
+                    Give your retirement a happy beginning with our pension
+                    plan.
+                  </p>
+                  <div>
+                    <button class="btn btn-sm listBtn">KNOW MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-2 mb-3 mt-3">
+                <div class="p-2 sliderBoxes">
+                  <p class="h4">Pradhan Mantri Jeevan Jyoti Bima Yojna</p>
+                  <hr style="width: 70%; margin-left: 20%; margin-right: 20%" />
+                  <p class="h6">Ensure a secure future for your loved ones.</p>
+                  <div>
+                    <button class="btn btn-sm listBtn">KNOW MORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-2 mb-3 mt-3">
+                <div class="p-2 sliderBoxes">
+                  <p class="h4">Jeevan Nivesh Plan</p>
+                  <hr style="width: 70%; margin-left: 20%; margin-right: 20%" />
+                  <p class="h6">
+                    Plan for the wishes that come after all plans.
+                  </p>
+                  <div>
+                    <button class="btn btn-sm listBtn">KNOW MORE</button>
+                  </div>
+                </div>
+              </div>
+              <a onclick="plusSlides(-1)">&#10094;</a>
+              <a onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="container footerLinks p-5">
+            <div class="row">
+              <div class="col-md-5">
+                <p>DOWNLOAD CENTER</p>
+                <div class="container-fluid">
+                  <div class="row boderRight">
+                    <div class="col">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"
+                            >Policy Servicing Forms
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"
+                            >Group Service Request Forms</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Claims Forms </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">SI Mandate Forms</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"
+                            >Old Products Brouchures</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            Underwriting Questionaires</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            Proposal Form Download
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"
+                            >Group Proposal Form Download
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Tablet Addendum </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"> AML Addendum</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Product Videos</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <p>QUICK LINKS</p>
+                <div class="container-fluid">
+                  <div class="row boderRight">
+                    <div class="col">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Terms of Use </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Hyperlink Policy</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Ombudsman Procedure</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Disclaimer</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Public Disclosures</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"> Corporate Agents</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            Whistle Blower Policy
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Report an Incident </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Tenders and Notices</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"> Do Not Call Registry</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">NRI Customer</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <p>FAQs</p>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Information Safety </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Complain Investigation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Suspicious Calls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> Premium Conversion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Choose renewal payment date</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="container p-5 colorThemeWhite">
+            <div class="row footerText">
+              <div class="col-sm-8 col-md-9">
+                <p>
+                  Canara HSBC Oriental Bank of Commerce Life Insurance Co Ltd
+                </p>
+                <p>
+                  <a href="https://www.lifeinscouncil.org/"
+                    >www.lifeinscouncil.org </a
+                  >|IRDAI Registration no: 136.
+                </p>
+                <p><a href="https://www.irda.gov.in/">www.irda.gov.in</a></p>
+                <p>WEBNJV2CHONOV15 ENG</p>
+              </div>
+              <div class="col-sm-4 col-md-3">
+                <p><strong>FOLLOW US AT</strong></p>
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a href="https://www.facebook.com/">
+                      <img
+                        alt="fb"
+                        src="assets/icons/fb.png"
+                        style="width: 30px; height: auto; margin: 10px"
+                    /></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://twitter.com/home">
+                      <img
+                        alt="tiwtter"
+                        src="assets/icons/twitter.png"
+                        style="width: 30px; height: auto; margin: 10px"
+                    /></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/swapnilnarhire/">
+                      <img
+                        alt="linkdin"
+                        src="assets/icons/linkdin.png"
+                        style="width: 30px; height: auto; margin: 10px"
+                    /></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.youtube.com/">
+                      <img
+                        alt="you Tube"
+                        src="assets/icons/youTube.png"
+                        style="width: 30px; height: auto; margin: 10px"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="container footerNote p-5">
+            <div class="row">
+              <div class="col-sm-12">
+                <p>
+                  BEWARE OF SPURIOUS PHONE CALLS AND FICTITIOUS/FRAUDULENT
+                  OFFERS. IRDAI clarifies to public that > IRDAI or its official
+                  do not involve in activities like sale of any kind of
+                  insurance or financial products nor invest premiums. > IRDAI
+                  does not announce any bonus. Public receiving such phone calls
+                  are requested to lodge a police complaint along with details
+                  of phone call, number
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <p class="centerFlex">
+            ©2017 Canara HSBC Oriental Bank of Commerce Life Insurance Co. Ltd.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/captcha.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
+</html>
